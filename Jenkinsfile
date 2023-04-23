@@ -20,7 +20,7 @@ pipeline{
             }
             post{
                 success{
-                    echo "pull 성공"
+                    echo "pull success"
                 }
 
                 always{
@@ -28,7 +28,7 @@ pipeline{
                 }
 
                 cleanup{
-                    echo "사후처리 전부 끝"
+                    echo "all end "
                 }
             }
         }
