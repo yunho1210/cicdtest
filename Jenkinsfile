@@ -14,7 +14,7 @@ pipeline{
                 echo "clonning repository"
 
 
-                gir url: 'https://github.com/yunho1210/cicdtest.git',
+                git url: 'https://github.com/yunho1210/cicdtest.git',
                     branch: 'main',
                     credentialsID: 'token for jenkins , git test'
             }
