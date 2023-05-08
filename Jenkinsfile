@@ -1,35 +1,21 @@
 pipeline{
-    agent any
-
-    triggers{
-        pollSCM('* * * * *')
+    agent {
+        label "dev-agent"
     }
-
     stages{
         //git down
         stage('Prepare'){
-            agent any
-
-            steps{
-                echo "clonning repository"
-
-
-                git url: 'https://github.com/yunho1210/cicdtest.git',
-                    branch: 'main',
-                    credentialsId: 'token for jenkins , git test'
+             agent {
+               label "dev-agent"
             }
-            post{
-                success{
-                    echo "pull success"
-                }
 
-                always{
-                    echo "i tried..."
-                }
+           steps{
+                echo "pwd"
+                
+                git url: "https://github.com/yunho1210/cicdtest.git",
+                    branch: "main",
+                    credentialsId: "git-token-for-jenkins"
 
-                cleanup{
-                    echo "all end "
-                }
             }
         }
     }
