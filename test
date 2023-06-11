@@ -11,3 +11,7 @@ git push yunho1
 test1
 test
 test2
+git add .
+git commit -m "test"
+git push origin yunho1:main
+git push origin yunho1
