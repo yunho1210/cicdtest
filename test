@@ -1,4 +1,8 @@
 test`
 test2
 test3
+<<<<<<< HEAD
 gittest 
+=======
+testtes
+>>>>>>> main
