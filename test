@@ -2,3 +2,10 @@ test`
 test2
 test3
 testtes
+git add .
+git commit -m "test"
+git push origin main 
+git checkout yunho 
+git merge main 
+git push yunho 
+test
