@@ -5,7 +5,7 @@ testtes
 git add .
 git commit -m "test"
 git push origin main 
-git checkout yunho 
+git checkout -b yunho1
 git merge main 
-git push yunho 
+git push yunho1 
 test1
