@@ -1,7 +1,7 @@
 test`
 test2
 test3
-<<<<<<< HEAD
+
 testtes
 git add .
 git commit -m "test"
@@ -30,6 +30,7 @@ testㅅㄷㄴㅅㄷㄷㄴ
 tesㄷㅎㄴ
 tet
 test
-=======
+
 gittest 
->>>>>>> a19f9aa (:test)
+
+git test
