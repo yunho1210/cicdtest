@@ -1,36 +1,42 @@
-pipeline{
-    agent any
-
-    triggers{
-        pollSCM('* * * * *')
-    }
-
-    stages{
-        //git down
-        stage('Prepare'){
-            agent any
-
-            steps{
-                echo "clonning repository"
-
-
-                git url: 'https://github.com/yunho1210/cicdtest.git',
-                    branch: 'main',
-                    credentialsId: 'token for jenkins , git test'
-            }
-            post{
-                success{
-                    echo "pull success"
-                }
-
-                always{
-                    echo "i tried..."
-                }
-
-                cleanup{
-                    echo "all end "
-                }
-            }
+pipeline {
+  agent any
+  stages {
+    stage('Prepare') {
+      agent any
+      post {
+        success {
+          echo 'pull success'
         }
+
+        always {
+          echo 'i tried...'
+        }
+
+        cleanup {
+          echo 'all end '
+        }
+
+      }
+      steps {
+        echo 'clonning repository'
+      }
     }
+
+    stage('stepo') {
+      steps {
+        sleep 3
+      }
+    }
+
+    stage('dep') {
+      steps {
+        sh '''echo "test"
+'''
+      }
+    }
+
+  }
+  triggers {
+    pollSCM('* * * * *')
+  }
 }
